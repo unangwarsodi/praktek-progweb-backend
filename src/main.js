@@ -60,7 +60,7 @@ app.put("/film/update", async (req, res) => {
         })
 
         if(!isValid) {
-            throw new Error("Duplicata");
+            throw new Error("Duplicate");
         } else {
             res.send({success: true, message: "data berhasil diubah"});
         }
@@ -78,7 +78,7 @@ app.delete("/film/delete", async (req, res) => {
         });
 
         if(!isValid) {
-            throw new Error("Duplicata");
+            throw new Error("Duplicate");
         } else {
             res.send({success: true, message: "data berhasil dihapus"});
         }
