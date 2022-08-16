@@ -38,7 +38,7 @@ app.post("/film/create", async (req, res) => {
             res.send({success: true, message: "data berhasil dibuat"})
         }
     } catch (err) {
-        res.send({status: "Error", message: err.message});
+        res.send({success: false, message: err.message});
     }
 })
 
